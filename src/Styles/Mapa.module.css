@@ -1,44 +1,44 @@
-/* Contêiner principal */
+
 .container {
   display: flex;
-  flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
-  height: calc(100vh - 140px); /* Altura total da tela menos header e footer */
-  width: 100%; /* Usa toda a largura */
+  flex-wrap: wrap; 
+  height: calc(100vh - 140px); 
+  width: 100%; 
   padding: 1rem;
-  box-sizing: border-box; /* Inclui padding e borda no cálculo de largura/altura */
-  gap: 1rem; /* Espaçamento entre o filtro e o mapa */
+  box-sizing: border-box; 
+  gap: 1rem; 
 }
 
-/* Painel de filtros */
+
 .filterPanel {
-  flex: 0 0 300px; /* Largura fixa de 300px */
-  background-color: #f3f4f6; /* Fundo cinza claro */
-  padding: 1rem 1.5rem; /* Espaçamento interno */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
-  border-radius: 8px; /* Bordas arredondadas */
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  flex: 0 0 300px; 
+  background-color: #f3f4f6; 
+  padding: 1rem 1.5rem; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  overflow-y: auto; 
   display: flex;
-  flex-direction: column; /* Organiza o conteúdo verticalmente */
-  gap: 1rem; /* Espaçamento entre os elementos do filtro */
+  flex-direction: column; 
+  gap: 1rem; 
 }
 
-/* Grupo de rádio buttons */
+
 .radioGroup {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* Espaçamento entre os itens */
+  gap: 0.5rem; 
 }
 
-/* Grupo de selects */
+
 .selectGroup {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-/* Botão de aplicar filtros */
+
 .applyButton {
-  background-color: #007bff; /* Azul principal */
+  background-color: #007bff; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -50,58 +50,58 @@
 }
 
 .applyButton:hover {
-  background-color: #0056b3; /* Azul mais escuro no hover */
+  background-color: #0056b3; 
 }
 
-/* Mapa */
+
 .map {
-  flex: 1; /* O mapa ocupa todo o espaço restante */
+  flex: 1; 
   border-radius: 8px;
-  overflow: hidden; /* Garante que o mapa não ultrapasse os limites do contêiner */
+  overflow: hidden; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e5e7eb; /* Fundo cinza claro */
-  max-height: 100%; /* Evita que o mapa ultrapasse a altura */
-  width: 100%; /* Garante que o mapa ocupe toda a largura do contêiner */
+  background-color: #e5e7eb; 
+  max-height: 100%; 
+  width: 100%; 
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Organiza os elementos em coluna */
-    height: auto; /* Permite ajustar a altura dinamicamente */
+    flex-direction: column; 
+    height: auto; 
   }
 
   .filterPanel {
-    flex: 0 0 auto; /* Remove a largura fixa */
-    width: 100%; /* O painel ocupa toda a largura */
+    flex: 0 0 auto; 
+    width: 100%; 
   }
 
   .map {
-    flex: none; /* Remove o comportamento de flex-grow */
-    height: 400px; /* Define uma altura fixa para o mapa em tablets */
+    flex: none; 
+    height: 400px; 
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    flex-direction: column; /* Organiza os elementos em coluna */
-    height: auto; /* Permite ajustar a altura dinamicamente */
-    gap: 0.5rem; /* Reduz o espaçamento em dispositivos móveis */
+    flex-direction: column; 
+    height: auto; 
+    gap: 0.5rem; 
   }
 
   .filterPanel {
-    padding: 0.5rem; /* Reduz o padding para dispositivos móveis */
-    width: 100%; /* Garante que o painel ocupe toda a largura */
+    padding: 0.5rem; 
+    width: 100%; 
   }
 
   .map {
-    height: 300px; /* Define uma altura menor para o mapa em dispositivos móveis */
+    height: 300px; 
   }
 
   .applyButton {
-    font-size: 0.9rem; /* Reduz o tamanho do botão */
-    padding: 0.5rem; /* Ajusta o padding */
+    font-size: 0.9rem; 
+    padding: 0.5rem; 
   }
 }

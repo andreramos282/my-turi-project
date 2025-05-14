@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
 interface BarChartProps {
-  labels: string[]; // Rótulos para o eixo X
-  data: number[]; // Dados para o gráfico
-  title: string; // Título do gráfico
+  labels: string[]; 
+  data: number[]; 
+  title: string; 
 }
 
 const BarChart: React.FC<BarChartProps> = ({ labels, data, title }) => {
@@ -13,12 +13,12 @@ const BarChart: React.FC<BarChartProps> = ({ labels, data, title }) => {
 
   useEffect(() => {
     if (chartRef.current) {
-      // Se já houver um gráfico, destrua-o antes de criar um novo
+      
       if (chartInstance.current) {
         chartInstance.current.destroy();
       }
 
-      // Criação do gráfico de barras
+      
       chartInstance.current = new Chart(chartRef.current, {
         type: 'bar',
         data: {
@@ -27,36 +27,36 @@ const BarChart: React.FC<BarChartProps> = ({ labels, data, title }) => {
             {
               label: title,
               data,
-              backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor de preenchimento das barras
-              borderColor: 'rgba(75, 192, 192, 1)', // Cor das bordas das barras
-              borderWidth: 1, // Largura das bordas
+              backgroundColor: 'rgba(75, 192, 192, 0.2)', 
+              borderColor: 'rgba(75, 192, 192, 1)', 
+              borderWidth: 1, 
             },
           ],
         },
         options: {
-          responsive: true, // Torna o gráfico responsivo
+          responsive: true, 
           plugins: {
             legend: {
               display: true,
-              position: 'top', // Posiciona a legenda no topo
+              position: 'top', 
             },
             title: {
               display: true,
-              text: title, // Adiciona o título ao gráfico
+              text: title, 
             },
           },
           scales: {
             x: {
               title: {
                 display: true,
-                text: 'Categorias', // Texto do eixo X
+                text: 'Categorias', 
               },
             },
             y: {
-              beginAtZero: true, // Começa o eixo Y no zero
+              beginAtZero: true, 
               title: {
                 display: true,
-                text: 'Valores', // Texto do eixo Y
+                text: 'Valores', 
               },
             },
           },
@@ -64,7 +64,7 @@ const BarChart: React.FC<BarChartProps> = ({ labels, data, title }) => {
       });
     }
 
-    // Cleanup para destruir o gráfico quando o componente for desmontado
+    
     return () => {
       if (chartInstance.current) {
         chartInstance.current.destroy();
@@ -72,7 +72,7 @@ const BarChart: React.FC<BarChartProps> = ({ labels, data, title }) => {
     };
   }, [labels, data, title]);
 
-  return <canvas ref={chartRef}></canvas>; // Canvas onde o gráfico será renderizado
+  return <canvas ref={chartRef}></canvas>; 
 };
 
 export default BarChart;

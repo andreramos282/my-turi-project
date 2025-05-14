@@ -1,19 +1,19 @@
-/* Container principal da aplicação */
+
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  min-height: 100vh; 
 }
 
-/* Área principal que contém as abas */
+
 .main {
-  flex: 1; /* Faz o conteúdo principal expandir para ocupar o espaço restante */
-  padding: 1rem; /* Espaçamento interno */
-  box-sizing: border-box; /* Inclui padding no cálculo de largura/altura */
-  background-color: #f9f9f9; /* Cor de fundo para separar o conteúdo */
+  flex: 1; 
+  padding: 1rem; 
+  box-sizing: border-box; 
+  background-color: #f9f9f9; 
 }
 
-/* Header */
+
 .header {
   background-color: #1e3a8a;
   color: white;
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* Necessário para posicionar o menu hambúrguer */
+  position: relative; 
 }
 
 .logo img {
@@ -31,28 +31,28 @@
 .navContainer {
   display: flex;
   gap: 1rem;
-  transition: all 0.3s ease-in-out; /* Suaviza a transição ao exibir/ocultar o menu */
+  transition: all 0.3s ease-in-out; 
 }
-/* Botão de navegação (menu) */
+
 .navBtn {
-  background: none; /* Sem fundo */
-  color: white; /* Cor padrão do texto */
+  background: none; 
+  color: white; 
   border: none;
   cursor: pointer;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza as mudanças de cor e o salto */
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 
-/* Efeito de hover: texto azul claro e salto */
+
 .navBtn:hover {
-  color: #add8e6; /* Altera apenas a cor do texto para azul claro */
-  transform: scale(1.1); /* Faz o botão saltar levemente (aumenta 10% do tamanho) */
+  color: #add8e6; 
+  transform: scale(1.1); 
 }
 
-/* Botão de menu hambúrguer */
+
 .hamburger {
-  display: none; /* Esconde o botão hambúrguer em telas maiores */
+  display: none; 
   background: none;
   border: none;
   color: white;
@@ -60,15 +60,15 @@
   cursor: pointer;
 }
 
-/* Responsividade para o header */
+
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Exibe o botão hambúrguer em dispositivos menores */
+    display: block; 
   }
 
   .navContainer {
-    display: none; /* Esconde o menu por padrão */
-    flex-direction: column; /* Empilha os itens verticalmente */
+    display: none; 
+    flex-direction: column; 
     gap: 0.5rem;
     background-color: #1e3a8a;
     position: absolute;
@@ -81,7 +81,7 @@
   }
 
   .navContainer.active {
-    display: flex; /* Exibe o menu ao clicar no botão hambúrguer */
+    display: flex; 
   }
 
   .navBtn {
@@ -90,47 +90,47 @@
   }
 }
 
-/* Footer */
+
 .footer {
-  background-color: #1e3a8a; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  text-align: center; /* Centraliza o texto */
-  padding: 1rem; /* Espaçamento interno */
-  width: 100%; /* Garante que o footer ocupe toda a largura */
-  position: relative; /* Mantém o footer no fluxo do layout */
+  background-color: #1e3a8a; 
+  color: white; 
+  text-align: center; 
+  padding: 1rem; 
+  width: 100%; 
+  position: relative; 
 }
 
 .footer p {
-  margin: 0.5rem 0; /* Espaçamento entre as linhas de texto */
+  margin: 0.5rem 0; 
 }
 
 .footerLogos {
   display: flex;
-  justify-content: center; /* Centraliza os logos horizontalmente */
-  align-items: center; /* Centraliza os logos verticalmente */
-  gap: 1rem; /* Espaçamento entre os logos */
+  justify-content: center; 
+  align-items: center; 
+  gap: 1rem; 
   margin-top: 1rem;
 }
 
 .footerLogo {
-  max-width: 150px; /* Define um tamanho máximo para as imagens */
-  width: 100%; /* Garante que a imagem ocupe a largura disponível */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: contain; /* Garante que a imagem seja ajustada sem corte ou distorção */
+  max-width: 150px; 
+  width: 100%; 
+  height: auto; 
+  object-fit: contain; 
 }
 
-/* Ajustes de responsividade */
+
 @media (max-width: 768px) {
   .footer {
-    padding: 0.5rem; /* Reduz o padding no footer */
+    padding: 0.5rem; 
   }
 
   .footerLogo {
-    max-width: 100px; /* Reduz ainda mais o tamanho máximo das imagens em dispositivos menores */
+    max-width: 100px; 
   }
 
   .footerLogos {
-    flex-direction: column; /* Empilha os logos verticalmente */
-    gap: 0.5rem; /* Reduz o espaço entre os logos */
+    flex-direction: column; 
+    gap: 0.5rem; 
   }
 }

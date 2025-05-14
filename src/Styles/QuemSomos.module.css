@@ -1,34 +1,34 @@
-/* Container centralizado */
+
 .container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100%; /* Garante que ocupe toda a altura restante */
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
   padding: 2rem;
 }
 
-/* Card cinza maior */
+
 .card {
-  background-color: #e5e7eb; /* Cinza claro */
-  padding: 3rem; /* Aumenta o espaço interno do card */
-  border-radius: 12px; /* Bordas arredondadas */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para destaque */
-  text-align: center; /* Centraliza o texto */
-  max-width: 1000px; /* Aumenta a largura máxima */
-  width: 100%; /* Garante que o card ocupe toda a largura disponível */
+  background-color: #e5e7eb; 
+  padding: 3rem; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  text-align: center; 
+  max-width: 1000px; 
+  width: 100%; 
   font-family: Arial, sans-serif;
 }
 
-/* Estilo do título */
+
 .title {
-  font-size: 2.5rem; /* Aumenta o tamanho do título */
+  font-size: 2.5rem; 
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
-/* Estilo do texto */
+
 .card p {
-  font-size: 1.2rem; /* Aumenta o tamanho do texto */
-  line-height: 1.8; /* Melhora o espaçamento entre linhas */
-  color: #374151; /* Texto em cinza escuro */
+  font-size: 1.2rem; 
+  line-height: 1.8; 
+  color: #374151; 
 }

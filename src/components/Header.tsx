@@ -14,17 +14,17 @@ const Header: React.FC<HeaderProps> = ({ showTab }) => {
 
   return (
     <header className={styles.header}>
-      {/* Logo */}
+      
       <div className={styles.logo}>
         <img src="./img/unnamed.png" alt="Turi Logo" />
       </div>
 
-      {/* Botão de menu hambúrguer */}
+      
       <button className={styles.hamburger} onClick={toggleMenu}>
-        &#9776; {/* Ícone de hambúrguer */}
+        &#9776; 
       </button>
 
-      {/* Menu de navegação (condicional para mobile) */}
+      
       <nav
         className={`${styles.navContainer} ${
           menuOpen ? styles.active : ''

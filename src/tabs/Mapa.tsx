@@ -12,10 +12,10 @@ const Mapa: React.FC = () => {
 
   useEffect(() => {
     if (mapRef.current === null) {
-      // Inicializa o mapa com a centralização no Brasil
+      
       const map = L.map('mapid', {
-        center: [-14.235, -51.9253], // Coordenadas do Brasil (latitude e longitude)
-        zoom: 4, // Nível de zoom inicial
+        center: [-14.235, -51.9253], 
+        zoom: 4, 
       });
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data © OpenStreetMap contributors',
@@ -26,12 +26,12 @@ const Mapa: React.FC = () => {
 
   const handleFilterApply = () => {
     console.log('Filtros aplicados:', { mapType, dataType, estado, cidade });
-    // Adicione a lógica para aplicar os filtros no mapa
+    
   };
 
   return (
     <section className={styles.container}>
-      {/* Painel de Filtros */}
+      {}
       <div className={styles.filterPanel}>
         <h2>Filtros</h2>
         <div className={styles.radioGroup}>
@@ -114,7 +114,7 @@ const Mapa: React.FC = () => {
         </button>
       </div>
 
-      {/* Div para o mapa */}
+      {}
       <div id="mapid" className={styles.map}></div>
     </section>
   );

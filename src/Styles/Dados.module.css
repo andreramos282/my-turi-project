@@ -1,15 +1,15 @@
-/* Contêiner do filtro */
+
 .filterContainer {
   background-color: #f3f4f6;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem; /* Garante espaço entre o filtro e o gráfico */
+  margin-bottom: 1rem; 
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Filtros */
+
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-/* Grupo de filtros */
+
 .filterGroup {
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
   margin: 0;
 }
 
-/* Botão de aplicar filtros */
+
 .applyButton {
   padding: 0.5rem 1rem;
   background-color: #2563eb;
@@ -48,7 +48,7 @@
   background-color: #1d4ed8;
 }
 
-/* Contêiner do gráfico */
+
 .chartContainer {
   background-color: #ffffff;
   border-radius: 8px;
@@ -59,28 +59,28 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin-top: 1rem; /* Garante espaço entre o filtro e o gráfico */
-  width: 100%; /* Garante que o gráfico ocupe apenas a largura disponível */
+  margin-top: 1rem; 
+  width: 100%; 
   box-sizing: border-box;
 }
 
-/* Wrapper do gráfico */
+
 .chartWrapper {
   width: 100%;
   max-width: 1200px;
-  aspect-ratio: 16 / 9; /* Define uma proporção fixa */
+  aspect-ratio: 16 / 9; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Canvas do gráfico */
+
 canvas {
-  width: 100% !important; /* Garante que o gráfico ocupe a largura total */
-  height: auto !important; /* Ajusta a altura automaticamente para evitar distorção */
+  width: 100% !important; 
+  height: auto !important; 
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .chartContainer {
     padding: 1rem;
@@ -88,7 +88,7 @@ canvas {
 
   .chartWrapper {
     max-width: 100%;
-    aspect-ratio: 16 / 9; /* Mantém a proporção */
+    aspect-ratio: 16 / 9; 
   }
 }
 
@@ -99,7 +99,7 @@ canvas {
 
   .chartWrapper {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Mantém a proporção */
+    aspect-ratio: 16 / 9; 
   }
 }
 
