@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import css from "./app.module.css"
+import css from "./app.module.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Mapa from './tabs/Mapa';
@@ -15,7 +15,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <div className={css.app}>
       <Header showTab={handleTabChange} />
       <main className={css.main}>
         {activeTab === 'inicio' && <Inicio />}

@@ -1,6 +1,7 @@
 /* Contêiner principal */
 .container {
   display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
   height: calc(100vh - 140px); /* Altura total da tela menos header e footer */
   width: 100%; /* Usa toda a largura */
   padding: 1rem;
@@ -56,9 +57,51 @@
 .map {
   flex: 1; /* O mapa ocupa todo o espaço restante */
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* Garante que o mapa não ultrapasse os limites do contêiner */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #e5e7eb; /* Fundo cinza claro */
+  max-height: 100%; /* Evita que o mapa ultrapasse a altura */
+  width: 100%; /* Garante que o mapa ocupe toda a largura do contêiner */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Organiza os elementos em coluna */
+    height: auto; /* Permite ajustar a altura dinamicamente */
+  }
+
+  .filterPanel {
+    flex: 0 0 auto; /* Remove a largura fixa */
+    width: 100%; /* O painel ocupa toda a largura */
+  }
+
+  .map {
+    flex: none; /* Remove o comportamento de flex-grow */
+    height: 400px; /* Define uma altura fixa para o mapa em tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* Organiza os elementos em coluna */
+    height: auto; /* Permite ajustar a altura dinamicamente */
+    gap: 0.5rem; /* Reduz o espaçamento em dispositivos móveis */
+  }
+
+  .filterPanel {
+    padding: 0.5rem; /* Reduz o padding para dispositivos móveis */
+    width: 100%; /* Garante que o painel ocupe toda a largura */
+  }
+
+  .map {
+    height: 300px; /* Define uma altura menor para o mapa em dispositivos móveis */
+  }
+
+  .applyButton {
+    font-size: 0.9rem; /* Reduz o tamanho do botão */
+    padding: 0.5rem; /* Ajusta o padding */
+  }
 }

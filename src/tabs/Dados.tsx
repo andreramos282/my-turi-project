@@ -11,7 +11,6 @@ const Dados: React.FC = () => {
 
   const handleApplyFilters = () => {
     console.log('Filtros Aplicados:', { mapType, dataType, startDate, endDate, region });
-    // Aqui você pode adicionar a lógica para atualizar os dados do gráfico com base nos filtros
   };
 
   // Dados fictícios para o gráfico
@@ -138,6 +137,9 @@ const Dados: React.FC = () => {
         <div className={styles.chartWrapper}>
           <BarChart labels={chartData.labels} data={chartData.datasets[0].data} title="Média de todos os dados" />
         </div>
+        <p className={styles.chartLegend}>
+          <strong>Legenda:</strong> Este gráfico representa a média dos dados selecionados ao longo dos meses.
+        </p>
       </div>
     </section>
   );

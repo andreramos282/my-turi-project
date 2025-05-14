@@ -48,3 +48,58 @@ p {
   font-size: 1rem;
   color: #4b5563;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Apenas uma coluna em tablets */
+    gap: 1rem; /* Reduz o espaçamento entre cartões */
+  }
+
+  .card {
+    width: 90%; /* O cartão ocupa 90% da largura da tela */
+    padding: 1.5rem; /* Reduz o padding para telas menores */
+  }
+
+  .title {
+    font-size: 1.8rem; /* Ajusta o tamanho do título */
+  }
+
+  h2 {
+    font-size: 1.1rem; /* Ajusta o tamanho do subtítulo */
+  }
+
+  p {
+    font-size: 0.95rem; /* Reduz o tamanho do texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* Uma coluna para dispositivos móveis */
+    gap: 0.5rem; /* Reduz ainda mais o espaçamento */
+  }
+
+  .card {
+    width: 95%; /* O cartão ocupa quase toda a largura da tela */
+    padding: 1rem; /* Reduz o padding para dispositivos móveis */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Reduz o tamanho do título para dispositivos móveis */
+  }
+
+  h2 {
+    font-size: 1rem; /* Reduz o tamanho do subtítulo */
+  }
+
+  p {
+    font-size: 0.85rem; /* Ajusta o tamanho do texto */
+  }
+
+  .icon {
+    width: 40px; /* Reduz o tamanho do ícone */
+    height: 40px;
+    margin-bottom: 0.75rem;
+  }
+}

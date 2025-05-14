@@ -4,7 +4,9 @@
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Garante espaço entre o filtro e o gráfico */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Filtros */
@@ -21,6 +23,7 @@
   flex-direction: column;
   gap: 0.5rem;
   min-width: 200px;
+  flex: 1;
 }
 
 .filterGroup p {
@@ -38,6 +41,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  flex: 0 0 auto;
 }
 
 .applyButton:hover {
@@ -47,7 +51,6 @@
 /* Contêiner do gráfico */
 .chartContainer {
   background-color: #ffffff;
-  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -55,13 +58,54 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 300px); /* Ajusta a altura para ocupar o espaço disponível, menos os filtros e margens */
+  padding: 1rem;
+  margin-top: 1rem; /* Garante espaço entre o filtro e o gráfico */
+  width: 100%; /* Garante que o gráfico ocupe apenas a largura disponível */
+  box-sizing: border-box;
 }
 
 /* Wrapper do gráfico */
 .chartWrapper {
-  width: 100%; /* O gráfico ocupa toda a largura do contêiner */
-  max-width: 1200px; /* Define uma largura máxima para o gráfico */
-  height: 100%; /* O gráfico ocupa toda a altura do contêiner */
-  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9; /* Define uma proporção fixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Canvas do gráfico */
+canvas {
+  width: 100% !important; /* Garante que o gráfico ocupe a largura total */
+  height: auto !important; /* Ajusta a altura automaticamente para evitar distorção */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .chartContainer {
+    padding: 1rem;
+  }
+
+  .chartWrapper {
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém a proporção */
+  }
+}
+
+@media (max-width: 480px) {
+  .chartContainer {
+    padding: 1rem;
+  }
+
+  .chartWrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém a proporção */
+  }
+}
+
+.chartLegend {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
