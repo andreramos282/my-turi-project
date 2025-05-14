@@ -1,0 +1,64 @@
+/* Contêiner principal */
+.container {
+  display: flex;
+  height: calc(100vh - 140px); /* Altura total da tela menos header e footer */
+  width: 100%; /* Usa toda a largura */
+  padding: 1rem;
+  box-sizing: border-box; /* Inclui padding e borda no cálculo de largura/altura */
+  gap: 1rem; /* Espaçamento entre o filtro e o mapa */
+}
+
+/* Painel de filtros */
+.filterPanel {
+  flex: 0 0 300px; /* Largura fixa de 300px */
+  background-color: #f3f4f6; /* Fundo cinza claro */
+  padding: 1rem 1.5rem; /* Espaçamento interno */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo verticalmente */
+  gap: 1rem; /* Espaçamento entre os elementos do filtro */
+}
+
+/* Grupo de rádio buttons */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Espaçamento entre os itens */
+}
+
+/* Grupo de selects */
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Botão de aplicar filtros */
+.applyButton {
+  background-color: #007bff; /* Azul principal */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.applyButton:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* Mapa */
+.map {
+  flex: 1; /* O mapa ocupa todo o espaço restante */
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb; /* Fundo cinza claro */
+}

@@ -1,0 +1,42 @@
+.header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.navContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.main {
+  min-height: calc(85vh - 68px);
+  max-height: auto;
+}
+
+.navBtn {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footerLogo {
+  height: 2rem;
+  margin: 0 0.5rem;
+}

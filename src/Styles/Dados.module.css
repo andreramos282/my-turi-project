@@ -1,0 +1,67 @@
+/* Contêiner do filtro */
+.filterContainer {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Grupo de filtros */
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.filterGroup p {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Botão de aplicar filtros */
+.applyButton {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.applyButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Contêiner do gráfico */
+.chartContainer {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 300px); /* Ajusta a altura para ocupar o espaço disponível, menos os filtros e margens */
+}
+
+/* Wrapper do gráfico */
+.chartWrapper {
+  width: 100%; /* O gráfico ocupa toda a largura do contêiner */
+  max-width: 1200px; /* Define uma largura máxima para o gráfico */
+  height: 100%; /* O gráfico ocupa toda a altura do contêiner */
+  padding: 1rem;
+}
