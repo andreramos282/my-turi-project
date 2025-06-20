@@ -1,0 +1,171 @@
+:root {
+  --filter-bg: #f3f4f6;
+  --filter-text: #222;
+  --filter-border: #d1d5db;
+  --filter-input-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --filter-bg: #23272f;
+  --filter-text: #f6f6f6;
+  --filter-border: #38404a;
+  --filter-input-bg: #181818;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 140px);
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.filterPanel {
+  flex: 0 0 300px;
+  background-color: var(--filter-bg);
+  color: var(--filter-text);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid var(--filter-border);
+}
+
+.filterPanel label,
+.filterPanel p {
+  color: var(--filter-text);
+}
+
+.filterPanel select,
+.filterPanel input[type="radio"] {
+  background: var(--filter-input-bg);
+  color: var(--filter-text);
+  border: 1px solid var(--filter-border);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.filterPanel select {
+  padding: 0.25rem 0.5rem;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.applyButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.applyButton:hover {
+  background-color: #0056b3;
+}
+
+.map {
+  flex: 1 1 0%;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 400px;
+  display: block;
+  background-color: var(--background);
+  color: var(--text);
+  height: 80vh;
+  max-height: 100%;
+  width: 100%;
+}
+
+.mapLegend {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 240px;
+  z-index: 1000;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .filterPanel {
+    flex: 0 0 auto;
+    width: 90%;
+  }
+
+  .map {
+    flex: none;
+    height: 400px;
+  }
+
+  .mapLegend {
+    position: static;
+    left: auto;
+    bottom: auto;
+    margin: 1rem 0 0 0;
+    width: 93%;
+    min-width: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  .filterPanel {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+  .applyButton {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .mapLegend {
+    position: static;
+    left: auto;
+    bottom: auto;
+    margin: 1rem 0 0 0;
+    width: 90%;
+    min-width: 0;
+    box-shadow: none;
+  }
+}
