@@ -1,10 +1,4 @@
-# Myopes
-<div align="center">
-</div>
-<img src='Sprints/Imagens Turi/thumbnail_logo-equipe.png' width='500'/>
-<div>
 
------------------------------------------------------------------------------------
  
  <h1>DESCRIÇÃO:</h1>    
 O objetivo é especificar e construir um site informativo que tem como objetivo facilitar o acesso à informação com dados precisos e atualizados de cada região e bioma. Nossa equipe é formada por seis estudantes apaixonados por tecnologia e pelo que fazem. Utilizamos tecnologias modernas para coletar e apresentar dados de forma clara e interativa.
